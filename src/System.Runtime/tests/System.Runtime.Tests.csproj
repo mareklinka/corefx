@@ -116,11 +116,15 @@
     <Compile Include="System\Runtime\CompilerServices\RuntimeHelpersTests.netcoreapp1.1.cs" />
     <Compile Include="System\UIntPtrTests.netcoreapp1.1.cs" />
   </ItemGroup>
+  <ItemGroup Condition="'$(TargetGroup)' != 'netcoreapp1.1'">
+    <Compile Include="System\StringSplitExtensions.cs" />
+  </ItemGroup>
   <ItemGroup Condition="'$(TargetGroup)' == ''">
     <Compile Include="ArrayTests.netstandard1.7.cs" />
     <Compile Include="System\DelegateTests.netstandard1.7.cs" />
     <Compile Include="System\AttributeTests.netstandard1.7.cs" />
     <Compile Include="CompareToTests.cs" />
+    <Compile Include="DBNullTests.netstandard1.7.cs" />
     <Compile Include="DecimalTests.netstandard1.7.cs" />
     <Compile Include="EnumTests.netstandard1.7.cs" />
     <Compile Include="GetTypeCodeTests.cs" />
@@ -135,6 +139,7 @@
     <Compile Include="System\GuidTests.netstandard1.7.cs" />
     <Compile Include="System\MarshalByRefObjectTests.cs" />
     <Compile Include="System\NotFiniteNumberExceptionTests.cs" />
+    <Compile Include="System\Security\SecurityAttributeTests.cs" /> 
     <Compile Include="System\StackOverflowExceptionTests.cs" />
     <Compile Include="System\SystemExceptionTests.cs" />
     <Compile Include="System\StringTests.netstandard1.7.cs" />
@@ -166,6 +171,7 @@
       <LogicalName>System.Reflection.Tests.EmbeddedTextFile.txt</LogicalName>
     </EmbeddedResource>
     <Compile Include="System\Threading\WaitHandleTests.netstandard1.7.cs" />
+    <Compile Include="Microsoft\Win32\SafeHandles\CriticalHandleZeroOrMinusOneIsInvalid.netstandard1.7.cs" />
     <Compile Include="Microsoft\Win32\SafeHandles\SafeHandleZeroOrMinusOneIsInvalid.netstandard1.7.cs" />
     <Compile Include="System\Reflection\ModuleTests.cs" />
     <Compile Include="System\Reflection\PointerTests.cs" />
@@ -180,6 +186,7 @@
     <Compile Include="System\HandleTests.netstandard1.7.cs" />
     <Compile Include="System\AppContext\AppContext.Switch.cs" />
     <Compile Include="System\AppContext\AppContext.Switch.Validation.cs" />
+    <Compile Include="System\Reflection\StrongNameKeyPairTests.netstandard1.7.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />

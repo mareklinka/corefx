@@ -1,17 +1,19 @@
 {
   "frameworks": {
-    "netstandard1.3": {
+    "netstandard1.7": {
       "dependencies": {
-        "Microsoft.TargetingPack.Private.CoreCLR": "1.2.0-beta-24609-02"
-      },
-      "imports": [
-        "dotnet5.4"
-      ]
+        "Microsoft.TargetingPack.Private.CoreCLR": "1.2.0-beta-24617-03"
+      }
+    },
+    "net463": {
+      "dependencies": {
+        "Microsoft.TargetingPack.NETFramework.v4.6": "1.0.1"
+      }
     },
     "uap10.1": {
       "dependencies": {
         "Microsoft.NETCore.Platforms": "1.0.1",
-        "Microsoft.TargetingPack.Private.NETNative": "1.1.0-beta-24604-01",
+        "Microsoft.TargetingPack.Private.NETNative": "1.1.0-beta-24607-01",
         "Microsoft.TargetingPack.Private.WinRT": "1.0.1",
         "System.Diagnostics.Debug": "4.0.0",
         "System.Diagnostics.Tools": "4.0.0",
